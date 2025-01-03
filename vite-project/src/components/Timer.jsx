@@ -6,16 +6,16 @@ const Timer = () => {
     let [hour, setHour] = useState(0);
     let [minute, setMinute] = useState(0);
     let [second, setSecond] = useState(0);
-    let [time, setTime] = useState(0); // Time in minutes
+    let [time, setTime] = useState(0);
 
     let id;
 
     const divider = () => {
         if (flag && time > 0) {
-            const totalMinutes = time; // Since input is already in minutes
+            const totalMinutes = time; 
             setHour(Math.floor(totalMinutes / 60));
             setMinute(totalMinutes % 60);
-            setSecond(0); // Start with 0 seconds
+            setSecond(0); 
             setTime(0);
             setFlag(false); 
         } else {
