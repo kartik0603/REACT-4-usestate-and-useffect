@@ -28,14 +28,14 @@ const Timer = () => {
         if (!flag) {
             id = setInterval(() => {
                 if (second > 0) {
-                    setSecond((prev) => prev - 1);
+                    setSecond(second-1);
                 } else if (minute > 0) {
                     setSecond(59);
-                    setMinute((prev) => prev - 1);
+                    setMinute(minute-1);
                 } else if (hour > 0) {
                     setSecond(59);
                     setMinute(59);
-                    setHour((prev) => prev - 1);
+                    setHour(hour-1);
                 } else {
                     clearInterval(id);
                     setFlag(true);
